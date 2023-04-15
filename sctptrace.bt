@@ -1,0 +1,24 @@
+#!/usr/bin/bpftrace
+
+#include <linux/socket.h>
+#include <net/sock.h>
+
+kprobe:inet_sendmsg,
+kprobe:inet6_sendmsg
+{
+	$sk = (struct sock *)arg0;
+
+	if($sk->sk_protocol == 33){
+		@sctp_send_count[comm]++;
+	}
+}
+
+kprobe:inet_recvmsg,
+kprobe:inet6_recvmsg
+{
+	$sk = (struct sock *)arg0;
+
+	if($sk->sk_protocol == 33){
+		@sctp_recv_count[comm]++;
+	}
+}
