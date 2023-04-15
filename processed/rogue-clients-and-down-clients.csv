@@ -1,0 +1,17 @@
+task, recv, send
+open5gs-sgwcd, 6, 6
+open5gs-sgwud, 6, 6
+open5gs-nssfd, 9, 6
+open5gs-bsfd, 28, 36
+open5gs-pcfd, 194, 138
+open5gs-nrfd, 230, 937
+open5gs-hssd, 286, 1
+open5gs-mmed, 287, 1
+open5gs-pcrfd, 287, 1
+open5gs-smfd, 441, 153
+open5gs-udmd, 950, 1551
+open5gs-ausfd, 976, 1850
+open5gs-amfd, 1766, 2006
+open5gs-udrd, 1822, 1557
+open5gs-scpd, 3302, 6258
+open5gs-upfd, 18788, 60927
